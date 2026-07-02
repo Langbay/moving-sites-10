@@ -45,6 +45,10 @@ body.en .en-text{display:inline}
 @media(max-width:860px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.grid{grid-template-columns:1fr}}
 .card{border:1px solid #e8ecf1;border-radius:16px;overflow:hidden;transition:.2s;background:#fff}
+.card-big{position:relative;border:none;aspect-ratio:1/1;border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.card-big .bigicon{font-size:clamp(80px,15vw,172px);line-height:1}
+.card-big .bigtitle{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px 18px 16px;font-size:clamp(18px,2.1vw,26px);font-weight:800;color:#fff;letter-spacing:.5px}
+.card-big:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,30,50,.14)}
 .card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,30,50,.10);border-color:var(--b)}
 .card summary{list-style:none;cursor:pointer;padding:24px 20px;display:block}
 .card summary::-webkit-details-marker{display:none}
@@ -109,35 +113,19 @@ footer .bot{border-top:1px solid #1d2a3c;margin-top:30px;padding-top:18px;text-a
 <section class="sec" id="svc" style="background:#f4f6f9"><div class="wrap">
   <h2 style="font-size:25px;opacity:0.94;transform:translateY(-9px)">我们能帮你做什么</h2>
   <p class="lead" style="font-size:16px;opacity:0.6;transform:translateY(0px)">兄弟搬家提供的搬运服务</p>
-  <div class="grid"><details class="card">
-      <summary>
-        <div class="ci" style="background:#1D4ED8;color:#fff">🏠</div>
-        <h3>奥克兰大小搬家</h3>
-        <span class="card-toggle">点击查看详情 ⌄</span>
-      </summary>
-      <p class="card-detail">奥克兰大小搬家。</p>
-    </details><details class="card">
-      <summary>
-        <div class="ci" style="background:#1D4ED8;color:#fff">🏢</div>
-        <h3>留学生搬家</h3>
-        <span class="card-toggle">点击查看详情 ⌄</span>
-      </summary>
-      <p class="card-detail">留学生搬家。</p>
-    </details><details class="card">
-      <summary>
-        <div class="ci" style="background:#1D4ED8;color:#fff">🚚</div>
-        <h3>新西兰长途搬家</h3>
-        <span class="card-toggle">点击查看详情 ⌄</span>
-      </summary>
-      <p class="card-detail">新西兰长途搬家。</p>
-    </details><details class="card">
-      <summary>
-        <div class="ci" style="background:#1D4ED8;color:#fff">📦</div>
-        <h3>商业运输</h3>
-        <span class="card-toggle">点击查看详情 ⌄</span>
-      </summary>
-      <p class="card-detail">商业运输。</p>
-    </details></div>
+  <div class="grid"><div class="card card-big" style="background:rgba(29,78,216,0.26)">
+        <div class="bigicon">🏠</div>
+        <h3 class="bigtitle" style="background:linear-gradient(0deg,rgba(11,60,198,0.92) 8%,rgba(11,60,198,0))">奥克兰大小搬家</h3>
+      </div><div class="card card-big" style="background:rgba(29,78,216,0.26)">
+        <div class="bigicon">🏢</div>
+        <h3 class="bigtitle" style="background:linear-gradient(0deg,rgba(11,60,198,0.92) 8%,rgba(11,60,198,0))">留学生搬家</h3>
+      </div><div class="card card-big" style="background:rgba(29,78,216,0.26)">
+        <div class="bigicon">🚚</div>
+        <h3 class="bigtitle" style="background:linear-gradient(0deg,rgba(11,60,198,0.92) 8%,rgba(11,60,198,0))">新西兰长途搬家</h3>
+      </div><div class="card card-big" style="background:rgba(29,78,216,0.26)">
+        <div class="bigicon">📦</div>
+        <h3 class="bigtitle" style="background:linear-gradient(0deg,rgba(11,60,198,0.92) 8%,rgba(11,60,198,0))">商业运输</h3>
+      </div></div>
 </div></section>
 
 
